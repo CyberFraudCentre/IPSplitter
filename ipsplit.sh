@@ -9,12 +9,7 @@ do
         break
     fi
     x=$(( $x + 1 ))
-    #nmap -sn $ip -oG - | awk '/Up$/{print $2}'  > ip$x.txt
-    echo "hello" >> "ip$x.txt"
-    echo "hello" >> "ip$x.txt"
-    echo "hello" >> "ip$x.txt"
-    echo "hello" >> "ip$x.txt"
-    echo "hello" >> "ip$x.txt"
+    nmap -sn $ip -oG - | awk '/Up$/{print $2}'  > ip$x.txt
 done
 
 b=0
