@@ -4,7 +4,7 @@ x=0
 while [ "1" = "1" ]
 do
 
-    read -n 30 -p "Please input the IP range (Enter X if done)" ip
+    read -n 30 -p "Please input the IP range (Enter X if done) " ip
     if [ "$ip" = "X" ]; then
         break
     fi
@@ -20,7 +20,7 @@ do
 done
 
 lines=$(cat final | wc -l)
-read -n 1 -p "How many people are on the internal?" people
+read -n 1 -p "How many people are on the internal? " people
 
 calc=$(echo $(( $lines / $people )))
 split final -l $calc
